@@ -1,7 +1,15 @@
-# Right-angled triangle pattern
-rows = 5
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num/2) + 1):
+        if num % i == 0:
+            return False
+    return True
 
-for i in range(1, rows + 1):
-    for j in range(i):
-        print("*", end=" ")
-    print()
+# Input number
+n = int(input("Enter a number: "))
+
+if is_prime(n):
+    print(n, "is a Prime Number")
+else:
+    print(n, "is NOT a Prime Number")
